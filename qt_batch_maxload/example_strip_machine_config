@@ -1,0 +1,50 @@
+# 第一列： 机器是否开启，on表示开启，off表示关闭。
+# 第二列： 机器id,前缀为 192.168.1.（默认） 或者 59.77.16.
+# 第三列： true/false表示p2p是否开启或关闭
+# 第四列： 测试的样例，1表示样例1，2、3同理，0表示1、2、3个样例都测试
+# 第五列： 服务器端缓冲区算法
+# 第六列： 服务器端缓冲区块数
+# 第七列： 客户端缓冲区算法
+# 第八列： 客户端缓冲区块数
+# 第九列： 客户端缓冲区算法的周期
+# 第十列： 视频分片大小，10表示10MB
+# on与ip之间为空格，其他之间为tab。格式不正确，会导致读取失败。
+on 11	true	1	fifo	1000	fifo	20	40	10
+on 12	true	2	fifo	1000	fifo	20	40	10
+on 13	true	3	fifo	1000	fifo	20	40	10
+
+on 14	true	1	fifo	1000	lru		20	40	10
+on 15	true	2	fifo	1000	lru		20	40	10
+on 16	true	3	fifo	1000	lru		20	40	10
+
+on 21	true	1	fifo	1000	dw		20	40	10
+on 22	true	2	fifo	1000	dw		20	40	10
+on 23	true	3	fifo	1000	dw		20	40	10
+
+on 24	true	1	fifo	1000	lfu		20	40	10
+on 25	true	2	fifo	1000	lfu		20	40	10
+on 26	true	3	fifo	1000	lfu		20	40	10
+
+on 17	true	1	fifo	1000	fifo	20	40	10
+on 18	true	2	fifo	1000	fifo	20	40	10
+on 19	true	3	fifo	1000	fifo	20	40	10
+
+on 27	true	1	fifo	1000	lru		20	40	10
+on 28	true	2	fifo	1000	lru		20	40	10
+on 29	true	3	fifo	1000	lru		20	40	10
+
+on 37	true	1	fifo	1000	dw		20	40	10
+on 38	true	2	fifo	1000	dw		20	40	10
+on 39	true	3	fifo	1000	dw		20	40	10
+
+on 47	false	1	fifo	1000	lfu		20	40	10
+on 48	false	2	fifo	1000	lfu		20	40	10
+on 49	false	3	fifo	1000	lfu		20	40	10
+
+on 57	true	1	fifo	1000	fifo	20	40	10
+on 58	true	2	fifo	1000	fifo	20	40	10
+on 59	true	3	fifo	1000	fifo	20	40	10
+
+on 20	true	1	fifo	1000	fifo	20	40	10
+on 30	true	2	fifo	1000	fifo	20	40	10
+on 40	true	3	fifo	1000	fifo	20	40	10
