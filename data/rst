@@ -1,0 +1,14 @@
+
+serverlog_DW_16_1_1_0	At:5400	 mRequestTimes: 2400, mRefuseTimes: 7, mSpreadTimes: 423, mDeleteTimes:263
+serverlog_DW_16_1_1_100	At:5400	 mRequestTimes: 2400, mRefuseTimes: 3, mSpreadTimes: 274, mDeleteTimes:114
+serverlog_DW_16_1_1_200	At:5400	 mRequestTimes: 2400, mRefuseTimes: 5, mSpreadTimes: 196, mDeleteTimes:40
+serverlog_DW_16_1_1_300	At:5400	 mRequestTimes: 2400, mRefuseTimes: 4, mSpreadTimes: 149, mDeleteTimes:8
+serverlog_DW_16_1_1_400	At:5400	 mRequestTimes: 2400, mRefuseTimes: 4, mSpreadTimes: 114, mDeleteTimes:0
+serverlog_DW_16_1_1_500	At:5400	 mRequestTimes: 2400, mRefuseTimes: 35, mSpreadTimes: 89, mDeleteTimes:0
+serverlog_DW_16_2_1_0	At:5400	 mRequestTimes: 2400, mRefuseTimes: 2, mSpreadTimes: 526, mDeleteTimes:366
+serverlog_DW_16_2_1_100	At:5400	 mRequestTimes: 2400, mRefuseTimes: 4, mSpreadTimes: 301, mDeleteTimes:141
+serverlog_DW_16_2_1_200	At:5400	 mRequestTimes: 2400, mRefuseTimes: 3, mSpreadTimes: 222, mDeleteTimes:62
+serverlog_DW_16_2_1_300	At:5400	 mRequestTimes: 2400, mRefuseTimes: 6, mSpreadTimes: 173, mDeleteTimes:18
+serverlog_DW_16_2_1_400	At:2086.04,src/lbserver.cpp,630 mRequestTimes: 941, mRefuseTimes: 0, mSpreadTimes: 9, mDeleteTimes:0
+serverlog_DW_16_2_1_400	At:5400	 mRequestTimes: 2400, mRefuseTimes: 10, mSpreadTimes: 135, mDeleteTimes:1
+serverlog_DW_16_2_1_500	At:5400	 mRequestTimes: 2400, mRefuseTimes: 24, mSpreadTimes: 105, mDeleteTimes:0

@@ -1,0 +1,51 @@
+README author:mjq @2014.03.4
+
+系统分为 分条存储仿真系统 和 资源扩散仿真系统
+注意：修改global.ini后，要先 make clean,再 make.
+		如果直接make,是nothing to do...
+
+分条存储：
+	1、config/global.ini中设置 simulation=strip，然后make clean， make.这里注意要make clean.
+	
+	2、config/strip.ini中设置运行参数
+	
+	3、如果是在本机运行，只运行一次，可执行命令：
+		./striprun.sh & 
+		注：该脚本可以设置参数，./striprun.sh [startnum] [endnum] &
+		example:
+			./striprun.sh 1 3  	#样例1、2、3
+			./striprun.sh 2   	#样例2
+			./striprun.sh 2 1 	#error
+	
+	4、如果本机已经有在运行了，则执行命令：
+		./restart_striprun.sh &
+		注：这个脚本会调用striprun.sh，默认参数是 1 3，即样例1 2 3 都测试
+	
+	5、如果要批量运行程序，则需要
+		batch_striprun.sh
+		注1： Usage:$0 [192.168.1] [get/run]，机器ip前缀 和 get/run命令
+			example:
+				./batch_striprun.sh 192.168.1 get  	#测试机器ip前缀为192.168.1，更新程序并编译
+				./batch_striprun.sh 192.168.1 run   #运行程序
+				./batch_striprun.sh 59.77.16  get	#
+		注2： 其中 strip_machine_config 中配置每台机器的运行参数。
+			batch_striprun.sh 读取该配置文件，然后为每台机器生成相应的配置文件。
+			然后通过 expect_strip.sh 脚本传输到每台机器。
+		注3： expect_strip.sh 
+				Usage:$argv0 user@ip startnum endnum get/run
+			example:
+				./expect_strip.sh 192.168.1 1 3 get  #
+				./expect_strip.sh 192.168.1 2 2 get  #
+				./expect_strip.sh 59.77.16  2 3 run	 #
+	
+	6、其中 striprun.sh 脚本运行结束后，会调用 collect_strip.sh 收集、计算、上传数据
+		其中计算的数据结果存放在 rst_strip 文件中
+
+	7、collect_strip.sh 脚本单独运行时，如果带参数 "svn",则表示把结果上传到svn
+		即 commit rst_strip
+		example:
+			./collect_strip.sh
+			./collect_strip.sh svn
+
+资源扩散：
+	同上。
